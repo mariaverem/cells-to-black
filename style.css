@@ -1,0 +1,33 @@
+body {
+    background-color: bisque;
+}
+
+
+table {
+    margin: 20px auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.square {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.btn-change {
+    margin: 0 auto;
+    width: 75px;
+    height: 20px;
+    text-align: center;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
