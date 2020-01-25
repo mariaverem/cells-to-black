@@ -12,7 +12,7 @@ function addTableElements() {
     for( let k = 0; k < newTr.length; k++) {
         for(i = 0; i < 6; i++) {
             let newTd = document.createElement('td');
-            newTd.className = 'square';
+            newTd.className = 'square not-checked';
             newTr[k].append(newTd);
         }       
     }
@@ -28,16 +28,18 @@ container.append(btnChange);
 newTable.addEventListener('click', function(event) {
     let squareTarget = event.target;
     if (squareTarget.tagName == 'TD') {
-        squareTarget.classList.toggle('bg-black');
+        squareTarget.classList.toggle('checked');
     }
 })
 
+// btnChange.addEventListener('click', function() {
+//     let tdArr = document.querySelectorAll('td');
+//      for(let i = 0; i < tdArr.length; i++) {
+//          let elem = tdArr[i];
+//          elem.classList.toggle('bg-black');
+//      }
+// })
+
 btnChange.addEventListener('click', function() {
-    let tdArr = document.querySelectorAll('td');
-     for(let i = 0; i < tdArr.length; i++) {
-         let elem = tdArr[i];
-         elem.classList.toggle('bg-black');
-     }
+    newTable.classList.toggle('reverse');
 })
-
-
